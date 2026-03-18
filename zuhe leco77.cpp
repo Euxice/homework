@@ -13,7 +13,7 @@ void dfs(int s)
 		std::cout << "[" << path[0] << "," << path[1] << "]" << "," << std::endl;
 		return;
 	}
-	for (int i = s; i <= n; i++)
+	for (int i = s; i <= n-(k-path.size())+1; i++)//¼ôÖ¦ÏÞÖÆ
 	{
 		path.push_back(i);
 		dfs(i+1);

@@ -2,27 +2,36 @@
 #include <vector>
 
 std::vector<int>A;
+
+int co = 0;
 int u(int n)
 {
-	n -= 1;
+	
+	if (n <= 0)
+	{
+		return 0;
+	}
 	if (n == 1)
 	{
 		return 1;
 	}
 	else
 	{
-		return u(n - 1);
+		return co+=u(n - 1);
 	}
 }
+
+int ci = 0;
+
 int otto(int n)
 {
 	if (n == 1)
 	{
-		return 1;
+		return  1;
 	}
 	else
 	{
-		return otto(n - 1) + u(n - 1);
+		return ci = otto(n - 1) + u(n - 1);
 	}
 
 }
